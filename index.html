@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Urvishkumar Badreshiya: restaurant operations manager. Portfolio for a Junior Venue Manager role at Circular Quay, Sydney.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%23466E96%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Georgia,serif%27 font-size=%2728%27 fill=%27%23FFFCF7%27 text-anchor=%27middle%27%3EUB%3C/text%3E%3C/svg%3E">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Urvishkumar Badreshiya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;600;700&display=swap">
+<style>
+/* Layout: a harbourside bistro carte. Striped awning with a scalloped edge as the one bold mark; harbour-blue serif type on warm paper; centred menu-style headings; a service-day board with menu-column dividers as the signature; sticky ferry-timetable route card; stat rings; order tickets on a pass rail; hover-reveal habit cards. Deliberately single light theme. */
+:root {
+  color-scheme: light;
+  --paper: #F7F3ED;
+  --card: #FFFCF7;
+  --harbour: #466E96;
+  --deep: #1D3447;
+  --salt: #E3EBF2;
+  --sand: #EDE4D6;
+  --ink: #22303C;
+  --text: #3A4652;
+  --muted: #6E7781;
+  --rule: #DCD3C6;
+  --on-deep: #D6E0EA;
+  --sky: #A9C1D9;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --out: cubic-bezier(.22, 1, .36, 1);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--text); font-family: var(--serif); font-size: 19px; line-height: 1.6; }
+a { color: var(--harbour); }
+a:focus-visible, button:focus-visible, .habit:focus-visible, summary:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--deep); line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+h1 em, h2 em, h3 em { font-style: italic; color: var(--harbour); }
+p { margin: 0; max-width: 64ch; }
+.inner { max-width: 1160px; margin: 0 auto; padding-inline: 20px; }
+.label { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--harbour); }
+
+/* Reading progress */
+.progress { position: fixed; left: 0; right: 0; top: 0; height: calc(3px + env(safe-area-inset-top, 0px)); padding-top: env(safe-area-inset-top, 0px); z-index: 60; pointer-events: none; }
+.progress i { display: block; height: 3px; background: var(--harbour); transform-origin: 0 50%; transform: scaleX(0); }
+
+/* Awning */
+.awning { height: 46px; background: repeating-linear-gradient(90deg, var(--harbour) 0 34px, var(--card) 34px 68px); position: relative; }
+.awning::after { content: ""; position: absolute; left: 0; right: 0; bottom: -16px; height: 16px; background: radial-gradient(circle at 17px 0, var(--harbour) 16px, transparent 16.5px) 0 0 / 68px 16px repeat-x, radial-gradient(circle at 51px 0, var(--card) 16px, transparent 16.5px) 0 0 / 68px 16px repeat-x; }
+
+/* Contact strip + header */
+.util { font-family: var(--sans); font-size: 14px; padding-top: 26px; }
+.util .inner { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 22px; }
+.util .item { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+.util a.item { font-weight: 700; }
+.copy { font: inherit; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--harbour); background: transparent; border: 1px solid var(--harbour); padding: 1px 9px; cursor: pointer; }
+.head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.head .inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 28px; padding-block: 12px; }
+.mark { text-decoration: none; font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2.4vw, 25px); color: var(--deep); letter-spacing: .02em; white-space: nowrap; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: var(--sans); }
+nav a { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; padding-bottom: 3px; background-image: linear-gradient(var(--harbour), var(--harbour)); background-size: 0% 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s var(--out); }
+nav a:hover { background-size: 100% 1px; }
+
+/* Hero */
+.hero .inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 52px; padding-block: 64px 40px; align-items: center; }
+.hero h1 { font-size: clamp(46px, 6.8vw, 88px); line-height: .98; margin-top: 18px; }
+.hero h1 .w { display: inline-block; }
+.hero .lead { font-size: 21px; color: var(--ink); margin-top: 24px; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.btn { font-family: var(--sans); display: inline-flex; align-items: center; font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; padding: 13px 24px; border: 1px solid var(--harbour); color: var(--card); background: var(--harbour); transition: transform .25s var(--out), background-color .25s var(--out), color .25s var(--out); }
+.btn:hover { transform: translateY(-2px); background: var(--deep); border-color: var(--deep); }
+.btn.line { background: transparent; color: var(--harbour); }
+.btn.line:hover { background: var(--harbour); color: var(--card); }
+.hero-art { display: grid; gap: 18px; justify-items: stretch; }
+.skyline svg { display: block; width: 100%; height: auto; overflow: visible; }
+.skyline .ln { fill: none; stroke: var(--harbour); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.skyline .ln2 { fill: none; stroke: var(--deep); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.skyline .wv { fill: none; stroke: var(--sky); stroke-width: 2; stroke-linecap: round; }
+.slate { background: var(--deep); color: var(--on-deep); padding: 22px 24px 20px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 22px; position: relative; }
+.slate .label { grid-column: 1 / -1; color: var(--sky); }
+.slate b { display: block; font-family: var(--serif); font-weight: 500; font-size: 44px; line-height: 1; color: var(--card); font-variant-numeric: tabular-nums; }
+.slate span { font-family: var(--sans); font-size: 14px; line-height: 1.4; display: block; margin-top: 6px; }
+.slate .foot { grid-column: 1 / -1; border-top: 1px solid rgba(214, 224, 234, .3); padding-top: 12px; font-family: var(--sans); font-size: 13px; }
+
+/* Section headings, menu style */
+section { padding-block: 88px 12px; }
+.menu-head { text-align: center; display: grid; justify-items: center; gap: 12px; }
+.menu-head h2 { font-size: clamp(38px, 5vw, 60px); }
+.menu-head p { font-style: italic; color: var(--muted); font-size: 19px; }
+.menu-head .flourish { width: 120px; height: 10px; }
+.menu-head .flourish path { fill: none; stroke: var(--harbour); stroke-width: 1.4; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.split.flip > :first-child { order: 2; }
+.prose { display: grid; gap: 16px; margin-top: 20px; }
+.prose p strong { color: var(--ink); font-weight: 600; }
+.case h2 { font-size: clamp(34px, 4.2vw, 50px); margin-top: 10px; }
+.case .lead { font-size: 21px; color: var(--ink); }
+.lesson { margin-top: 24px; border-top: 1px solid var(--harbour); border-bottom: 1px solid var(--harbour); padding: 14px 0; color: var(--ink); font-style: italic; }
+.lesson b { display: block; font-family: var(--sans); font-style: normal; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--harbour); margin-bottom: 4px; }
+
+/* Story + sticky timetable */
+.story p[data-stops] { transition: color .4s var(--out); }
+.story .first { font-size: 22px; color: var(--ink); }
+.route-wrap { position: sticky; top: 92px; }
+.timetable { background: var(--card); border: 1px solid var(--rule); padding: 22px 22px 16px; }
+.timetable h3 { font-size: 28px; }
+.tt-sub { font-family: var(--sans); font-size: 12px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-top: 4px; }
+.route-map { display: block; width: 100%; height: auto; margin: 14px 0 4px; }
+.route-map .trace-bg { fill: none; stroke: var(--rule); stroke-width: 2.5; stroke-dasharray: 2 6; stroke-linecap: round; }
+.route-map .trace { fill: none; stroke: var(--harbour); stroke-width: 2.5; stroke-linecap: round; }
+.route-map .pt { fill: var(--card); stroke: var(--deep); stroke-width: 2; transition: fill .3s var(--out); }
+.route-map .pt.on { fill: var(--harbour); }
+.route-map text { font-family: var(--sans); font-size: 12px; fill: var(--muted); }
+.route { list-style: none; margin: 10px 0 0; padding: 0; display: grid; font-family: var(--sans); }
+.route li { display: grid; grid-template-columns: 74px minmax(0, 1fr) 14px; gap: 12px; align-items: center; padding-block: 9px; border-top: 1px dashed var(--rule); transition: opacity .4s var(--out), transform .4s var(--out); }
+.route .yr { font-weight: 700; color: var(--harbour); font-variant-numeric: tabular-nums; font-size: 14px; }
+.route b { color: var(--ink); display: block; font-size: 15px; }
+.route span.d { font-size: 13px; color: var(--muted); display: block; }
+.route .lamp { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--deep); background: var(--card); transition: background-color .3s var(--out); }
+.route li.active .lamp { background: var(--harbour); border-color: var(--harbour); }
+
+/* Service-day board */
+.board { margin-top: 40px; background: var(--card); border: 1px solid var(--rule); padding: 30px 26px; }
+.board-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; border-bottom: 1px solid var(--rule); padding-bottom: 14px; font-family: var(--sans); font-size: 13px; color: var(--muted); }
+.board-top b { color: var(--deep); letter-spacing: .14em; text-transform: uppercase; font-size: 12px; }
+.slots { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.slot { padding: 22px 20px 6px; text-align: center; display: grid; gap: 8px; align-content: start; border-left: 1px solid var(--rule); }
+.slot:nth-child(4n + 1) { border-left: 0; }
+.slot:nth-child(n + 5) { border-top: 1px solid var(--rule); }
+.slot .t { font-family: var(--sans); font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--harbour); }
+.slot h3 { font-size: 27px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; text-decoration-color: var(--rule); }
+.slot p { font-size: 16px; font-style: italic; color: var(--text); margin-inline: auto; }
+.am-quote { margin: 26px auto 0; max-width: 46ch; text-align: center; border-top: 1px solid var(--harbour); border-bottom: 1px solid var(--harbour); padding: 16px 8px; }
+.am-quote p { font-style: italic; font-size: 22px; line-height: 1.35; color: var(--deep); margin: 0 auto; }
+.board-note { margin: 18px auto 0; text-align: center; font-family: var(--sans); font-size: 13px; color: var(--muted); }
+
+/* Stat rings */
+.stats-wrap { background: var(--sand); margin-top: 88px; }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; padding-block: 56px; }
+.stat { display: grid; gap: 10px; justify-items: center; text-align: center; align-content: start; }
+.ring { position: relative; width: 120px; height: 120px; }
+.ring svg { width: 120px; height: 120px; transform: rotate(-90deg); }
+.ring .bg { fill: none; stroke: var(--rule); stroke-width: 7; }
+.ring .fg { fill: none; stroke: var(--harbour); stroke-width: 7; stroke-linecap: round; }
+.ring .tick { stroke: var(--deep); stroke-width: 3; }
+.ring .gaps line { stroke: var(--sand); stroke-width: 3; }
+.ring .num { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--serif); font-weight: 500; font-size: 31px; color: var(--deep); font-variant-numeric: tabular-nums; }
+.stat h3 { font-size: 24px; }
+.stat p { font-size: 16px; }
+.stat .note { font-family: var(--sans); font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+
+/* Brief and evidence */
+.fit { margin-top: 32px; border-top: 1px solid var(--deep); }
+.fit-row { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.6fr) 104px; gap: 20px; padding: 16px 6px; border-bottom: 1px solid var(--rule); align-items: start; transition: background-color .3s var(--out); }
+.fit-row:not(.fit-head):hover { background: var(--card); }
+.fit-row span:first-child { font-style: italic; color: var(--deep); font-size: 19px; }
+.fit-row span:nth-child(2) { font-size: 17px; }
+.fit-head span { font-family: var(--sans); font-size: 11px !important; font-style: normal !important; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted) !important; }
+.chip { font-family: var(--sans); font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 4px 10px; display: inline-block; white-space: nowrap; background: var(--salt); color: var(--deep); }
+.chip.plan { background: var(--sand); color: var(--text); }
+@media (max-width: 760px) { .fit-row { grid-template-columns: minmax(0, 1fr); gap: 6px; } .fit-head { display: none; } }
+
+/* Variance card */
+.paper { background: var(--card); border: 1px solid var(--rule); padding: 24px; }
+.vline { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding-block: 14px; border-bottom: 1px dashed var(--rule); align-items: baseline; }
+.vline:last-of-type { border-bottom: 0; }
+.vline small { grid-column: 1 / -1; font-family: var(--sans); font-size: 13px; color: var(--muted); }
+.vline span { color: var(--ink); }
+.vline b { font-family: var(--serif); font-weight: 500; font-size: 34px; color: var(--deep); font-variant-numeric: tabular-nums; line-height: 1; }
+.vline.key b { color: var(--harbour); }
+.paper h3 { font-size: 26px; border-bottom: 1px solid var(--deep); padding-bottom: 10px; }
+
+/* Pass rail with tickets */
+.rail-wrap { position: relative; padding-top: 18px; }
+.rail-bar { height: 8px; background: var(--deep); position: relative; z-index: 1; }
+.tickets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: -4px; }
+.tk { background: var(--card); border: 1px solid var(--rule); padding: 14px 14px 12px; font-family: var(--mono); font-size: 13.5px; line-height: 1.45; color: var(--ink); transform-origin: 50% 0; }
+.tk .tm { display: flex; justify-content: space-between; font-weight: 700; color: var(--harbour); border-bottom: 1px dashed var(--rule); padding-bottom: 6px; margin-bottom: 6px; }
+.tk.close { background: var(--deep); color: var(--on-deep); border-color: var(--deep); }
+.tk.close .tm { color: var(--sky); border-color: rgba(214, 224, 234, .3); }
+
+/* Fresh Bake panel */
+.band { background: var(--deep); color: var(--on-deep); margin-top: 88px; }
+.band .inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 52px; padding-block: 72px; }
+.band h2 { color: var(--card); font-size: clamp(34px, 4.2vw, 50px); margin-top: 10px; }
+.band h2 em { color: var(--sky); }
+.band .label { color: var(--sky); }
+.band p strong { color: var(--card); font-weight: 600; }
+.figs { display: grid; gap: 0; align-content: center; }
+.fig { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; align-items: baseline; padding-block: 16px; border-bottom: 1px solid rgba(214, 224, 234, .25); }
+.fig:last-child { border-bottom: 0; }
+.fig b { font-family: var(--serif); font-weight: 500; font-size: 52px; color: var(--card); line-height: 1; font-variant-numeric: tabular-nums; }
+.fig span { font-family: var(--sans); font-size: 15px; }
+.quote { font-style: italic; font-size: clamp(26px, 3vw, 34px); line-height: 1.2; color: var(--sky); margin-top: 26px; }
+
+/* People ledger */
+.ledger { display: grid; gap: 0; }
+.ledger div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 18px; padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.ledger div:first-of-type { border-top: 1px solid var(--deep); }
+.ledger small { grid-column: 1 / -1; font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--harbour); }
+.ledger s { color: var(--muted); text-decoration-thickness: 1px; }
+.ledger strong { color: var(--deep); font-weight: 600; }
+
+/* Habit cards */
+.habits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 36px; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+.habit { position: relative; overflow: hidden; background: var(--card); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); min-height: 220px; padding: 24px; display: grid; cursor: default; }
+.habit .front { display: grid; gap: 18px; align-content: space-between; text-align: center; justify-items: center; }
+.habit .ico { display: block; width: 46px; height: 46px; color: var(--harbour); }
+.habit .ico svg { width: 100%; height: 100%; }
+.habit h3 { font-size: 28px; }
+.habit .hint { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.habit .back { position: absolute; inset: 0; background: var(--harbour); color: var(--card); padding: 24px; display: grid; align-content: center; gap: 10px; text-align: center; }
+.habit .back h3 { color: var(--card); font-style: italic; font-size: 25px; }
+.habit .back p { font-size: 17px; margin-inline: auto; }
+@media (hover: hover) and (pointer: fine) {
+  .habit { cursor: pointer; }
+  .habit .back { transform: translateY(101%); transition: transform .45s var(--out); }
+  .habit .front > * { transition: transform .45s var(--out), opacity .3s var(--out); }
+  .habit:hover .back, .habit:focus .back, .habit:focus-within .back { transform: translateY(0); }
+  .habit:hover .front > *, .habit:focus .front > * { transform: translateY(-10px); opacity: .35; }
+}
+@media not ((hover: hover) and (pointer: fine)) {
+  .habit { min-height: 0; }
+  .habit .back { position: static; background: transparent; color: var(--text); padding: 6px 0 0; }
+  .habit .back h3, .habit .hint { display: none; }
+}
+
+/* 90-day bar */
+.plan-bar { margin-top: 64px; }
+.plan-bar h3 { font-size: 32px; text-align: center; margin-bottom: 18px; }
+.plan-track { position: relative; height: 6px; background: var(--rule); overflow: hidden; }
+.plan-track i { position: absolute; inset: 0; background: linear-gradient(90deg, var(--deep), var(--harbour), var(--sky)); transform-origin: 0 50%; transform: scaleX(1); }
+.plan-marks { display: grid; grid-template-columns: 1fr 1fr 2fr 2fr; }
+.plan-marks div { padding: 16px 16px 0 0; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.plan-marks div + div { padding-left: 14px; border-left: 1px dashed var(--rule); }
+.plan-marks .d { font-family: var(--sans); font-weight: 700; color: var(--harbour); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.plan-marks b { font-weight: 500; color: var(--deep); font-size: 26px; line-height: 1.05; }
+.plan-marks span { font-size: 16px; }
+
+/* FAQ */
+.faq { margin-top: 32px; border-top: 1px solid var(--deep); }
+.faq details { border-bottom: 1px solid var(--rule); padding-block: 16px; }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; font-weight: 500; font-size: 26px; line-height: 1.15; color: var(--deep); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--harbour); font-family: var(--sans); font-size: 26px; line-height: 1; transition: transform .3s var(--out); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { margin-top: 10px; }
+.bring { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 12px 26px; margin: 16px 0 4px; max-width: 920px; }
+.bring dt { font-style: italic; font-size: 20px; line-height: 1.2; color: var(--harbour); padding-top: 2px; }
+.bring dd { margin: 0; padding-bottom: 12px; border-bottom: 1px solid var(--rule); font-size: 17px; }
+.bring dd:last-of-type { border-bottom: 0; }
+@media (max-width: 640px) { .bring { grid-template-columns: minmax(0, 1fr); gap: 4px; } .bring dt { padding-top: 10px; } }
+
+.closing { margin: 56px auto 0; text-align: center; font-size: clamp(27px, 3.2vw, 38px); line-height: 1.2; color: var(--deep); max-width: 30ch; }
+.closing em { color: var(--harbour); }
+.end-btns { justify-content: center; }
+
+footer { margin-top: 90px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 13px; color: var(--muted); }
+footer .inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding-block: 26px; }
+footer b { color: var(--deep); }
+.awning.bottom { height: 22px; }
+.awning.bottom::after { display: none; }
+
+@media (max-width: 980px) {
+  .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .slot:nth-child(4n + 1) { border-left: 1px solid var(--rule); }
+  .slot:nth-child(2n + 1) { border-left: 0; }
+  .slot:nth-child(n + 3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 860px) {
+  .hero .inner, .split, .band .inner { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .split.flip > :first-child { order: 0; }
+  .route-wrap { position: static; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .habits { grid-template-columns: minmax(0, 1fr); }
+  .plan-marks { grid-template-columns: 1fr 1fr; row-gap: 14px; }
+  .plan-marks div:nth-child(3) { padding-left: 0; border-left: 0; }
+  nav { display: none; }
+}
+@media (max-width: 520px) {
+  body { font-size: 18px; }
+  .slots { grid-template-columns: minmax(0, 1fr); }
+  .slot { border-left: 0 !important; }
+  .slot:nth-child(n + 2) { border-top: 1px solid var(--rule); }
+  .stats { grid-template-columns: minmax(0, 1fr); }
+  .tickets { grid-template-columns: minmax(0, 1fr); }
+  .fig { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .slate { grid-template-columns: minmax(0, 1fr); }
+  .route li { grid-template-columns: 64px minmax(0, 1fr) 12px; }
+  .board { padding: 22px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+<div class="awning" aria-hidden="true"></div>
+
+<div class="util"><div class="inner">
+  <span class="item"><span id="email">urvish.mb@gmail.com</span><button class="copy" type="button" data-copy="email">Copy</button></span>
+  <span class="item"><span id="phone">+91 99988 28555</span><button class="copy" type="button" data-copy="phone">Copy</button></span>
+  <a class="item" href="https://www.linkedin.com/in/urvishkumar-badreshiya/" rel="noopener">LinkedIn</a>
+</div></div>
+
+<header class="head"><div class="inner">
+  <a class="mark" href="#top">Urvishkumar Badreshiya</a>
+  <nav aria-label="Sections">
+    <a href="#story">Story</a>
+    <a href="#floor">The floor</a>
+    <a href="#fit">Fit</a>
+    <a href="#work">The work</a>
+    <a href="#how">How I work</a>
+    <a href="#questions">Questions</a>
+  </nav>
+</div></header>
+
+<div class="hero" id="top"><div class="inner">
+  <div>
+    <div class="label">Junior Venue Manager · Circular Quay, Sydney</div>
+    <h1 id="hero-h1">An hour ahead of every <em>service.</em></h1>
+    <p class="lead">Eight years in operations, three and a half of them on busy UK food floors. This role asks someone to own the floor so the senior team can focus on the bigger picture. At Shake Shack Birmingham that was my job: I opened the site as one of four managers and ran the floor beneath the General Manager, with assistant managers reporting to me.</p>
+    <div class="btns">
+      <a class="btn" href="#floor">A day on my floor</a>
+      <a class="btn line" href="#story">Read my story</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="skyline" aria-hidden="true">
+      <svg viewBox="0 0 420 170">
+        <path class="ln" id="sk-bridge" d="M 220 120 Q 320 34 418 120"/>
+        <path class="ln" id="sk-bridge2" d="M 236 120 Q 320 58 402 120"/>
+        <path class="ln2" id="sk-deck" d="M 206 120 H 420"/>
+        <path class="ln2" id="sk-sails" d="M 20 128 Q 40 70 74 52 Q 68 92 70 128 M 62 128 Q 92 62 128 46 Q 118 92 116 128 M 108 128 Q 132 86 160 76 Q 152 104 152 128 M 10 128 H 176"/>
+        <path class="wv" id="sk-w1" d="M 0 146 q 15 -8 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0"/>
+        <path class="wv" id="sk-w2" d="M 15 162 q 15 -8 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0" style="opacity:.55"/>
+      </svg>
+    </div>
+    <div class="slate" id="slate">
+      <div class="label">Shake Shack Birmingham · opening weeks</div>
+      <div><b>35–40</b><span>people on each shift, most of them new</span></div>
+      <div><b>1,000+</b><span>guests a day, more than £80,000 a week</span></div>
+      <div class="foot">My last full audit at the site, September 2025: 99.9%.</div>
+    </div>
+  </div>
+</div></div>
+
+<section id="story"><div class="inner split">
+  <div class="story">
+    <div class="menu-head" style="justify-items:start;text-align:left">
+      <div class="label">The route here</div>
+      <h2 class="reveal">From a factory floor to a <em>dining room</em></h2>
+    </div>
+    <div class="prose">
+      <p class="first" data-stops="0">Operations found me at university.</p>
+      <p data-stops="0">I led a non-technical event at an engineering college. The budget was fixed, so we negotiated, and I marketed it by visiting nearby colleges myself. It drew more participants than any event on the programme, technical ones included. On the day, one unplanned problem followed another, and keeping everything moving felt like the work I wanted to do.</p>
+      <p data-stops="1">The first job was a factory floor in Gujarat. <strong>Vikram Engineering Works</strong> makes spinning rings for the textile industry, and there I was responsible for 33 people, with zero accidents and orders shipped to 11 states. Broken systems and bottlenecks are what I notice first, and a production line gave that habit somewhere to work.</p>
+      <p data-stops="2,3">In January 2022 I moved to Birmingham for an MBA at Aston and joined <strong>Greggs</strong> a month later. The store had lost its manager, training had stopped and daily sales were down 25–30%. The accent and the pace were both new to me, and after one early shift I came close to quitting. I stayed. Before long I was running that store without a manager above me and covering two more sites every week.</p>
+      <p data-stops="3">The fixes were practical. Sandwiches were made to what actually sold, savouries were baked as the shelf ran low, ordering followed weekdays, weather and local events, and a third person joined the lunchtime peak. Sales rose 20% and waste fell 30%, with no extra resources.</p>
+      <p data-stops="4"><strong>Fresh Bake</strong> in Leicester was a new brand opening its first store. I helped build it from the layout up, then ran it alone after my manager left on 3 June 2024. <a href="#bake">Case 3 tells that story.</a></p>
+      <p data-stops="5"><strong>Shake Shack</strong> came next. I trained at Canary Wharf, where I was Manager-on-Duty on a site trading more than £90,000 a week, then opened Birmingham in December 2024. The brand's standards trace back to Danny Meyer's Union Square Hospitality Group, and the floor ran on them: food run to tables, orders read back, every complaint handled by a manager in person.</p>
+      <p data-stops="6">The next step is the one this role describes: a bigger floor, senior leaders to learn from, and a path to running a venue of my own.</p>
+    </div>
+  </div>
+  <div class="route-wrap">
+    <div class="timetable">
+      <h3>The route so far</h3>
+      <div class="tt-sub">Schematic, not to scale</div>
+      <svg class="route-map" viewBox="0 0 440 150" role="img" aria-label="Schematic route: Gujarat, then Birmingham, Leicester and London, then Sydney.">
+        <path class="trace-bg" d="M 150 70 C 120 52, 80 34, 56 26 C 76 40, 90 48, 98 54 C 104 60, 112 62, 118 60 C 200 80, 320 96, 404 120"/>
+        <path class="trace" id="trace" d="M 150 70 C 120 52, 80 34, 56 26 C 76 40, 90 48, 98 54 C 104 60, 112 62, 118 60 C 200 80, 320 96, 404 120"/>
+        <circle class="pt" data-pt="0" cx="150" cy="70" r="6"/><text x="150" y="92" text-anchor="middle">Gujarat</text>
+        <circle class="pt" data-pt="2" cx="56" cy="26" r="6"/><text x="56" y="12" text-anchor="middle">Birmingham</text>
+        <circle class="pt" data-pt="4" cx="98" cy="54" r="6"/><text x="84" y="72" text-anchor="end">Leicester</text>
+        <circle class="pt" data-pt="5" cx="118" cy="60" r="6"/><text x="124" y="44" text-anchor="start">London</text>
+        <circle class="pt" data-pt="6" cx="404" cy="120" r="6"/><text x="404" y="143" text-anchor="middle">Sydney</text>
+      </svg>
+      <ul class="route" id="route">
+        <li data-i="0"><span class="yr">2014–18</span><div><b>B.Tech, Mechanical Engineering</b><span class="d">C. U. Shah University, Gujarat</span></div><i class="lamp"></i></li>
+        <li data-i="1"><span class="yr">2018–21</span><div><b>Assistant Operations Manager</b><span class="d">Vikram Engineering Works</span></div><i class="lamp"></i></li>
+        <li data-i="2"><span class="yr">2022–23</span><div><b>MBA, Operations Management (2:1)</b><span class="d">Aston University, Birmingham</span></div><i class="lamp"></i></li>
+        <li data-i="3"><span class="yr">2022–24</span><div><b>Assistant Store Manager</b><span class="d">Greggs · Euro Garages, Birmingham</span></div><i class="lamp"></i></li>
+        <li data-i="4"><span class="yr">2024</span><div><b>Assistant Manager</b><span class="d">Fresh Bake · Treats Foods, Leicester</span></div><i class="lamp"></i></li>
+        <li data-i="5"><span class="yr">2024–25</span><div><b>Assistant Operations Manager</b><span class="d">Shake Shack · Diverse Dining, London and Birmingham</span></div><i class="lamp"></i></li>
+        <li data-i="6"><span class="yr">Next</span><div><b>Junior Venue Manager</b><span class="d">Circular Quay, Sydney</span></div><i class="lamp"></i></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="floor"><div class="inner">
+  <div class="menu-head">
+    <div class="label">Lunch through to late</div>
+    <h2 class="reveal">A day on <em>my floor</em></h2>
+    <svg class="flourish" viewBox="0 0 120 10" aria-hidden="true"><path d="M 0 5 H 48 M 72 5 H 120 M 54 5 q 6 -6 12 0 q -6 6 -12 0"/></svg>
+    <p>How a service day runs when the floor is mine, from the forecast to the last table.</p>
+  </div>
+  <div class="board" id="board">
+    <div class="board-top"><b>The running order</b><span>Built from the shifts I ran at Shake Shack Birmingham</span></div>
+    <ol class="slots">
+      <li class="slot"><span class="t">Before opening</span><h3>The forecast</h3><p>The day's sales forecast set first, with labour, prep and every station planned to it on the floorplan.</p></li>
+      <li class="slot"><span class="t">Pre-meal</span><h3>The why</h3><p>The forecast, the day's focus and yesterday's guest comments, good and bad, so everyone knows what we are doing and why.</p></li>
+      <li class="slot"><span class="t">Doors</span><h3>The welcome</h3><p>A host at the door to greet every guest and thank them on the way out, names used and orders read back.</p></li>
+      <li class="slot"><span class="t">The rush</span><h3>Off the station</h3><p>Once service is on time I step back to watch the whole room and move people to wherever the pressure is.</p></li>
+      <li class="slot"><span class="t">Every 90 minutes</span><h3>The travel path</h3><p>Thirteen checkpoints from the front door to the stores, so a shortage or a slip shows up before a guest finds it.</p></li>
+      <li class="slot"><span class="t">Afternoon</span><h3>The numbers</h3><p>POS sales and labour checked against the forecast, the rota adjusted, and breaks covered two at a time.</p></li>
+      <li class="slot"><span class="t">Evening</span><h3>The tables</h3><p>Food run, refills offered, plates checked on the pass, and any complaint taken to the guest by a manager.</p></li>
+      <li class="slot"><span class="t">Close</span><h3>Tomorrow</h3><p>Guest feedback read, low scorers contacted, causes logged and fixed, and the next floorplan written.</p></li>
+    </ol>
+    <blockquote class="am-quote"><p>My area manager once told me that if the manager has to go on a station, he is not managing well.</p></blockquote>
+    <p class="board-note">Guest likelihood to return at Birmingham rose from 8.1 to 9.3 out of 10 on the brand's feedback platform.</p>
+  </div>
+</div></section>
+
+<div class="stats-wrap"><div class="inner stats" aria-label="Key figures">
+  <div class="stat" data-ring="100" data-segments="40"><div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="50"/><circle class="fg" cx="60" cy="60" r="50"/><g class="gaps"></g></svg><div class="num" data-to="40">40</div></div><h3>On shift at once</h3><p>Up to 40 people a shift through the Birmingham opening weeks.</p><span class="note">One segment per person</span></div>
+  <div class="stat" data-ring="93"><div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="50"/><circle class="fg" cx="60" cy="60" r="50"/></svg><div class="num" data-to="9.3" data-dec="1">9.3</div></div><h3>Likely to return</h3><p>Guest score out of 10, up from 8.1.</p></div>
+  <div class="stat" data-ring="99.9"><div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="50"/><circle class="fg" cx="60" cy="60" r="50"/></svg><div class="num" data-to="99.9" data-dec="1" data-suffix="%">99.9%</div></div><h3>Full site audit</h3><p>An independent audit in my last week at Birmingham.</p></div>
+  <div class="stat" data-ring="26" data-tick="30"><div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="50"/><circle class="fg" cx="60" cy="60" r="50"/><line class="tick" x1="104" y1="60" x2="116" y2="60"/></svg><div class="num" data-to="26" data-prefix="&lt;" data-suffix="%">&lt;26%</div></div><h3>Crew labour</h3><p>Crew pay as a share of sales, against a 30% target.</p><span class="note">Marker shows the target</span></div>
+</div></div>
+
+<section id="fit"><div class="inner">
+  <div class="menu-head">
+    <div class="label">Your brief, my evidence</div>
+    <h2 class="reveal">What the role asks for, and where I have <em>done it</em></h2>
+    <p>Taken line by line from the Junior Venue Manager advert.</p>
+  </div>
+  <div class="fit" role="table" aria-label="Role requirements matched to evidence">
+    <div class="fit-row fit-head" role="row"><span role="columnheader">The advert asks for</span><span role="columnheader">Where I have done it</span><span role="columnheader">Match</span></div>
+    <div class="fit-row" role="row"><span role="cell">Experience in a high-volume restaurant</span><span role="cell">More than 1,000 guests a day and £80,000+ a week through the Birmingham opening weeks; Manager-on-Duty at Canary Wharf, a site trading more than £90,000 a week.</span><span role="cell"><i class="chip">Strong</i></span></div>
+    <div class="fit-row" role="row"><span role="cell">Confident leading large teams through busy services</span><span role="cell">35 to 40 people on each opening shift; two, then three assistant managers reporting to me; the International Burger Day rush (case 2).</span><span role="cell"><i class="chip">Strong</i></span></div>
+    <div class="fit-row" role="row"><span role="cell">Exceptional service standards and genuine guest focus</span><span role="cell">Likelihood to return raised from 8.1 to 9.3; feedback read daily and low scorers contacted; complaints taken to the table, put right, then fixed at the cause.</span><span role="cell"><i class="chip">Strong</i></span></div>
+    <div class="fit-row" role="row"><span role="cell">Highly organised and commercially aware</span><span role="cell">Daily forecasts and floorplans; a weekly commercial report; a cost-of-goods report twice a month; crew labour under 26% of sales against a 30% target; 70% of disputed delivery refunds won back (case 1).</span><span role="cell"><i class="chip">Strong</i></span></div>
+    <div class="fit-row" role="row"><span role="cell">Pride in presentation and professionalism</span><span role="cell">99.9% in a full independent audit, 98.71% in the NSF food safety audit, a 5-star food hygiene rating and 92%+ in brand audits walked with senior stakeholders from the US.</span><span role="cell"><i class="chip">Strong</i></span></div>
+    <div class="fit-row" role="row"><span role="cell">Calm, decisive and positive under pressure</span><span role="cell">Alone on Expo with 15 to 20 orders on screen while a £4,000 delivery was put away, and a team that enjoyed the day (case 2).</span><span role="cell"><i class="chip">Strong</i></span></div>
+    <div class="fit-row" role="row"><span role="cell">Ambition to become a Venue Manager</span><span role="cell">Two stores run without a manager above me, at Greggs and at Fresh Bake; a site opened as part of a four-person management team.</span><span role="cell"><i class="chip">Strong</i></span></div>
+    <div class="fit-row" role="row"><span role="cell">Working under NSW rules</span><span role="cell">The NSW RSA completed before my first service, with the Food Safety Supervisor certificate in my first month.</span><span role="cell"><i class="chip plan">Planned</i></span></div>
+  </div>
+</div></section>
+
+<section id="work" class="case"><div class="inner split">
+  <div>
+    <div class="label">Case 1 · The numbers behind the floor</div>
+    <h2 class="reveal">Reading the count, <em>line by line</em></h2>
+    <div class="prose">
+      <p class="lead">Twice a month I wrote Birmingham's cost-of-goods report. One period the stock count came back about £4,000 below what the system expected.</p>
+      <p>A total that size would normally go straight up the line as a loss. Instead I lined the biggest movements up against the previous period. Most of the swing was the previous period's gain reversing, left behind when the stock system had been down. Across the two periods the net movement was under £40, and one product line stood out as the thing actually worth investigating.</p>
+      <p>The same habit ran through the rest of the week: a commercial report on sales against budget, labour, average spend and sales per labour hour, and a weekly fight over delivery refunds. Challenging the platform's refunds on our orders won back 70% of the value refunded between May and July 2025.</p>
+    </div>
+    <div class="lesson reveal"><b>What I took from it</b>A total tells you something moved. The line-by-line comparison tells you what to fix.</div>
+  </div>
+  <div class="paper" id="variance">
+    <h3>One stock count, read twice</h3>
+    <div class="vline"><span>The headline</span><b>≈ £4,000</b><small>Counted stock against what the system expected</small></div>
+    <div class="vline"><span>Against last period</span><b>&lt; £40</b><small>Net across two periods, once the earlier gain was netted off</small></div>
+    <div class="vline key"><span>Worth investigating</span><b>1 line</b><small>One product flagged for the team to check</small></div>
+    <div class="vline"><span>Refunds won back</span><b>70%</b><small>Disputed delivery refunds, May to July 2025</small></div>
+  </div>
+</div></section>
+
+<section class="case"><div class="inner split flip">
+  <div>
+    <div class="label">Case 2 · A service under pressure</div>
+    <h2 class="reveal">Buy one, get one, <em>all day</em></h2>
+    <div class="prose">
+      <p class="lead">International Burger Day, 28 May 2025: every burger buy-one-get-one-free, and a queue behind the shutter by 10:30.</p>
+      <p>Staffing was ready for the crowd. What arrived at 11:00, exactly as the doors opened, was a delivery of about £4,000 of fresh and frozen stock at the back door. Everyone had ordered big for a big day, and none of it could sit outside losing temperature.</p>
+      <p>The call was to take the two slower team members off Expo and give them 15 to 20 minutes to put it all away. That left me running Expo alone, with 15 to 20 orders on the screen and the hot side cooking as fast as it could. Because most of the team had been cross-trained, people whose stations were under control came across to help.</p>
+      <p>At 11:30 the pair came back and I moved to the dining room, where one colleague was looking after 120 to 150 seats alone. When service was back on time I came off the stations altogether: restocking from the back, temperature checks, compliance and guests. After 15:00 the team took breaks two at a time.</p>
+      <p>The day closed at about £11,000 after discounts, with no friction on the floor. The team enjoyed it as much as I did.</p>
+    </div>
+    <div class="lesson reveal"><b>What I took from it</b>Cross-training pays off on the hardest day. Stepping off the stations is how you see the whole floor, and stock temperature still matters at the peak.</div>
+  </div>
+  <div class="rail-wrap" id="pass">
+    <div class="rail-bar" aria-hidden="true"></div>
+    <div class="tickets">
+      <div class="tk"><div class="tm"><span>10:30</span><span>FRONT</span></div>Queue behind the shutter before opening.</div>
+      <div class="tk"><div class="tm"><span>11:00</span><span>BACK DOOR</span></div>About £4,000 of fresh and frozen stock arrives.</div>
+      <div class="tk"><div class="tm"><span>11:00</span><span>EXPO</span></div>Two off Expo to put stock away. 15–20 orders on screen.</div>
+      <div class="tk"><div class="tm"><span>11:30</span><span>DINING</span></div>120–150 seats, one colleague. Support moves in.</div>
+      <div class="tk"><div class="tm"><span>On time</span><span>FLOOR</span></div>Off the stations: restock, temperatures, guests.</div>
+      <div class="tk close"><div class="tm"><span>Close</span><span>≈ £11,000</span></div>After discounts. No friction on the floor.</div>
+    </div>
+  </div>
+</div></section>
+
+<div class="band" id="bake"><div class="inner">
+  <div>
+    <div class="label">Case 3 · A brand's first store</div>
+    <h2 class="reveal">The youngest at the <em>table</em></h2>
+    <div class="prose">
+      <p>Fresh Bake was a new brand, and its Leicester store was the first. Before opening I co-designed the layout with the Operations Director, worked on the sales scenarios and the snagging list, and hired the opening team: 17 people in four days.</p>
+      <p>Too many people had a say and the chain of command was unclear. I was also the youngest in the room, so most of my suggestions were tested against someone else's first. More often than not, the store came back to them in the end.</p>
+      <p>The uniform quote looked high to me. After my shifts I researched local suppliers in Leicester and kept negotiating until one met my price, then did the same for ingredients. Nobody heard about it until the saving was real; the Operations Director checked it himself before we switched.</p>
+      <p>From <strong>3 June 2024</strong>, when my manager left, I ran the store alone. The contract said 45 hours a week. Most weeks were 65 to 70, because I wanted that store to succeed.</p>
+    </div>
+  </div>
+  <div class="figs">
+    <div class="fig"><b>−40%</b><span>uniform costs, after supplier research done outside working hours</span></div>
+    <div class="fig"><b>−5%</b><span>ingredient costs, negotiated the same way</span></div>
+    <div class="fig"><b>0%</b><span>early turnover in the opening team</span></div>
+    <p class="quote">If you work as an owner, the store will be the best.</p>
+  </div>
+</div></div>
+
+<section class="case"><div class="inner split">
+  <div>
+    <div class="label">Case 4 · People</div>
+    <h2 class="reveal">The conversation before <em>the decision</em></h2>
+    <div class="prose">
+      <p class="lead">At Shake Shack, one new team member was so slow that I was ready to end his probation.</p>
+      <p>Before deciding, I talked to him after a shift as a friend rather than his manager. He told me about a condition I had not known about, and then showed me how to give him work in a way that suited him. I rebuilt his tasks around his strengths. Two months later he was Employee of the Month.</p>
+      <p>Later, after one mistake in front of a senior guest, there was pressure to let him go. I asked for a month. Nobody raised it again.</p>
+      <p>At Fresh Bake, a young man new to the UK struggled through his interview, and my first instinct was no. Then I thought about my own first weeks at Greggs, when someone had given me the chance to get through. I hired him and trained him on guest experience. After I left, he became the store's Assistant Manager.</p>
+    </div>
+    <div class="lesson reveal"><b>What I took from it</b>Hire for energy and attitude, because the rest can be taught. When someone is struggling, talk first.</div>
+  </div>
+  <div class="ledger" id="ledger">
+    <div><small>Shake Shack</small><s>Close to failing probation</s><strong>Employee of the Month, two months later</strong></div>
+    <div><small>Fresh Bake</small><s>Nearly turned down at interview</s><strong>The store's Assistant Manager, after I left</strong></div>
+    <div><small>Shake Shack Birmingham</small><span>26 people I hired myself</span><strong>None of them resigned</strong></div>
+  </div>
+</div></section>
+
+<section id="how"><div class="inner">
+  <div class="menu-head">
+    <div class="label">House rules</div>
+    <h2 class="reveal">How I <em>work</em></h2>
+    <svg class="flourish" viewBox="0 0 120 10" aria-hidden="true"><path d="M 0 5 H 48 M 72 5 H 120 M 54 5 q 6 -6 12 0 q -6 6 -12 0"/></svg>
+    <p>Six habits, each one learned on a shift. Hover or focus a card to open it.</p>
+  </div>
+  <div class="habits">
+    <div class="habit" tabindex="0">
+      <div class="front"><span class="ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="24" cy="26" r="16"/><path d="M24 26V16M24 26l7 5M20 6h8"/></svg></span><div><h3>An hour ahead</h3><div class="hint">Open</div></div></div>
+      <div class="back"><h3>An hour ahead</h3><p>Run the forecast at the start of the day, not when the shelf is empty. Staying an hour ahead is how a problem stays small.</p></div>
+    </div>
+    <div class="habit" tabindex="0">
+      <div class="front"><span class="ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 38V18l14-9 14 9v20"/><path d="M18 38V26h12v12"/></svg></span><div><h3>Do it, time it, teach it</h3><div class="hint">Open</div></div></div>
+      <div class="back"><h3>Do it, time it, teach it</h3><p>Each task gets done by me first and timed. Then it goes to the team with that time limit and proper coaching, and the store can run with fewer people.</p></div>
+    </div>
+    <div class="habit" tabindex="0">
+      <div class="front"><span class="ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="24" cy="24" r="6"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6"/></svg></span><div><h3>Off the station</h3><div class="hint">Open</div></div></div>
+      <div class="back"><h3>Off the station</h3><p>An area manager taught me that a manager stuck on a station is not managing. With the right people on each station, I can watch the whole room, close gaps early and reach the guest who needs a word.</p></div>
+    </div>
+    <div class="habit" tabindex="0">
+      <div class="front"><span class="ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M8 10h32v20H22l-8 7v-7H8z"/></svg></span><div><h3>The why at pre-meal</h3><div class="hint">Open</div></div></div>
+      <div class="back"><h3>The why at pre-meal</h3><p>The team hears the day's purpose, what we are working on and why each task matters. People who know the why feel part of the team, and accountability follows.</p></div>
+    </div>
+    <div class="habit" tabindex="0">
+      <div class="front"><span class="ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="24" cy="24" r="17"/><path d="M17 28c2 3 4 4 7 4s5-1 7-4"/><path d="M18 19h.01M30 19h.01" stroke-width="3.5"/></svg></span><div><h3>Hire the smile</h3><div class="hint">Open</div></div></div>
+      <div class="back"><h3>Hire the smile</h3><p>Energy and attitude come first in every interview. Stations, systems and standards can be trained on shift; a smiling face and the right attitude cannot.</p></div>
+    </div>
+    <div class="habit" tabindex="0">
+      <div class="front"><span class="ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 28h32M12 28c0-7 5-12 12-12s12 5 12 12M24 16v-4M6 36h36"/></svg></span><div><h3>The guest gets the manager</h3><div class="hint">Open</div></div></div>
+      <div class="back"><h3>The guest gets the manager</h3><p>A complaint brings a manager to the table: acknowledge it, apologise, put it right with something extra. Then the cause is logged and fixed, and the guest hears back.</p></div>
+    </div>
+  </div>
+
+  <div class="plan-bar" aria-label="First 90 days">
+    <h3>My first 90 days on your floor</h3>
+    <div class="plan-track"><i id="plan-fill"></i></div>
+    <div class="plan-marks">
+      <div><span class="d">Days 1–15</span><b>Learn</b><span>Every service with the General Manager and Assistant General Manager, every station, and the team on each shift.</span></div>
+      <div><span class="d">Days 16–30</span><b>Ask why</b><span>Why each routine runs the way it does, plus the guest comments that come up most. Food Safety Supervisor certificate done.</span></div>
+      <div><span class="d">Days 31–60</span><b>Fix and test</b><span>Agree with the GM which floor problems come first, and trial changes on quieter services before they meet a Friday night.</span></div>
+      <div><span class="d">Days 61–90</span><b>Lock it in</b><span>What works becomes the floor standard, written into the pre-meal and training, and more of the day-to-day comes off the GM's desk.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="questions"><div class="inner">
+  <div class="menu-head">
+    <div class="label">Before you call</div>
+    <h2 class="reveal">Questions employers <em>ask</em></h2>
+  </div>
+  <div class="faq">
+    <details open><summary>Why this role?</summary><p>The advert describes a large, high-volume venue at Circular Quay, a General Manager and Assistant General Manager to learn from, and a real path to Venue Manager for someone who performs. That is the step I want. I have run stores without a manager above me and run a floor beneath one; the next stage is a bigger operation and, in time, a venue of my own.</p></details>
+    <details><summary>What will I bring with me?</summary>
+      <p>The rest of this page covers the floor, the guest and the numbers. These are the parts of the job that sit behind them.</p>
+      <dl class="bring">
+        <dt>Rotas and floorplans</dt>
+        <dd>The management rota and the holiday plan for the whole site, and a floorplan for every trading day with each person placed and each break covered. On training days, trainees rotated through the stations hour by hour.</dd>
+        <dt>Ordering and deliveries</dt>
+        <dd>Weekly orders to 11 suppliers across about 180 product lines, each one placed before its cut-off. Every delivery checked against its purchase order, with shortages and credits chased.</dd>
+        <dt>Reporting upwards</dt>
+        <dd>The site P&amp;L reviewed every period, with action taken on labour, cost of goods and controllable costs. The week's numbers walked through with my area manager, and the site presented on brand-audit walk-rounds.</dd>
+        <dt>Compliance paperwork</dt>
+        <dd>A co-developed allergen guide covering 85 products and the 14 regulated allergens, a shelf-life guide and risk-assessment sign-offs. The 48-hour exclusion rule applied after illness. Food Safety, Fire Marshal and First Aid at Level 2.</dd>
+        <dt>People processes</dt>
+        <dd>Crew learning plans and assessments, cross-training records, and employee-relations cases handled through a formal HR framework.</dd>
+        <dt>Getting ready for big days</dt>
+        <dd>Trial runs with the team before busy periods, and food sent to the neighbours before an opening to build goodwill.</dd>
+        <dt>An engineer's toolkit</dt>
+        <dd>A B.Tech in Mechanical Engineering, three and a half years in manufacturing, 5S and planograms on the shop floor, an MBA in Operations Management, and Excel and Power BI for forecasting.</dd>
+      </dl>
+    </details>
+    <details><summary>Can you work in Australia?</summary><p>I am an Indian national and would need employer sponsorship, which the advert says is available for the right candidate. I will prepare everything needed from my side.</p></details>
+    <details><summary>Would you relocate to Sydney?</summary><p>Yes, to within easy reach of Circular Quay.</p></details>
+    <details><summary>When can you start?</summary><p>Immediately, subject to the visa.</p></details>
+    <details><summary>Why this move?</summary><p>To step up. I have run a floor beneath a General Manager and run stores on my own. A large venue with senior leaders to learn from is where the next part of that learning happens.</p></details>
+    <details><summary>What languages do you speak?</summary><p>English and Hindi fluently. Gujarati is my native language.</p></details>
+    <details><summary>What qualifications do you bring?</summary><p>B.Tech in Mechanical Engineering from C. U. Shah University, an MBA in Operations Management (2:1) from Aston University, BCS Foundation and Practitioner certificates in Business Analysis, IBM certificates in data analysis, and Food Safety, Fire Marshal and First Aid at Level 2.</p></details>
+  </div>
+  <p class="closing reveal">Thank you for reading. I would like to run your floor at <em>Circular Quay</em>: a team that knows why each detail matters, and a service the senior team can rely on.</p>
+  <div class="btns end-btns" style="margin-top:26px">
+    <a class="btn" href="https://www.linkedin.com/in/urvishkumar-badreshiya/" rel="noopener">Connect on LinkedIn</a>
+    <a class="btn line" href="#top">Back to top</a>
+  </div>
+</div></section>
+
+<footer><div class="inner">
+  <span><b>Urvishkumar Badreshiya</b> · urvish.mb@gmail.com · +91 99988 28555</span>
+  <span>Personal page. Not affiliated with or endorsed by any employer named here. No employer documents are published.</span>
+</div></footer>
+<div class="awning bottom" aria-hidden="true"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* Copy buttons */
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.getAttribute('data-copy'));
+    var text = el ? el.textContent.trim() : '';
+    function selectIt() {
+      try { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {}
+      btn.textContent = 'Selected';
+    }
+    try { navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Copied'; }, selectIt); } catch (e) { selectIt(); }
+    setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+  });
+});
+
+/* Static ring geometry: final state, visible without JS or with reduced motion */
+var C = 2 * Math.PI * 50;
+document.querySelectorAll('.stat').forEach(function (st) {
+  var fg = st.querySelector('.fg'), pct = +st.getAttribute('data-ring'), seg = +st.getAttribute('data-segments') || 0;
+  fg.style.strokeDasharray = C;
+  if (seg) {
+    fg.style.strokeLinecap = 'butt';
+    var g = st.querySelector('.gaps');
+    if (g && !g.childNodes.length) {
+      for (var k = 0; k < seg; k++) {
+        var ln = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        ln.setAttribute('x1', '104'); ln.setAttribute('y1', '60'); ln.setAttribute('x2', '116'); ln.setAttribute('y2', '60');
+        ln.setAttribute('transform', 'rotate(' + (360 * k / seg) + ' 60 60)');
+        g.appendChild(ln);
+      }
+    }
+  }
+  fg.style.strokeDashoffset = seg ? 0 : C * (1 - pct / 100);
+  var tick = st.querySelector('.tick'), t = +st.getAttribute('data-tick');
+  if (tick && t) tick.setAttribute('transform', 'rotate(' + (360 * t / 100) + ' 60 60)');
+});
+
+/* Route highlighting (works with or without GSAP) */
+var routeItems = Array.prototype.slice.call(document.querySelectorAll('#route li'));
+var mapPts = Array.prototype.slice.call(document.querySelectorAll('.route-map .pt'));
+function setStops(list) {
+  var max = Math.max.apply(null, list);
+  routeItems.forEach(function (li) { li.classList.toggle('active', list.indexOf(+li.getAttribute('data-i')) > -1); });
+  mapPts.forEach(function (p) { p.classList.toggle('on', +p.getAttribute('data-pt') <= max); });
+}
+
+(function () {
+  if (!window.gsap || !window.ScrollTrigger) { setStops([0,1,2,3,4,5,6]); return; }
+  gsap.registerPlugin(ScrollTrigger);
+  var mm = gsap.matchMedia();
+
+  mm.add('(prefers-reduced-motion: reduce)', function () { setStops([0,1,2,3,4,5,6]); });
+
+  mm.add('(prefers-reduced-motion: no-preference)', function () {
+    var ease = 'power3.out';
+
+    /* Reading progress */
+    gsap.to('#progress', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+
+    /* Hero: the harbour line draws once on load */
+    ['#sk-sails', '#sk-bridge', '#sk-bridge2', '#sk-deck'].forEach(function (id) {
+      var a = document.querySelector(id), l = a.getTotalLength();
+      gsap.fromTo(a, { strokeDasharray: l, strokeDashoffset: l }, { strokeDashoffset: 0, duration: 1.2, ease: 'power2.out', delay: 0.2, onComplete: function () { a.style.strokeDasharray = 'none'; } });
+    });
+
+    /* Story: the active stop follows the paragraph being read (colour only, no movement) */
+    setStops([0]);
+    gsap.utils.toArray('.story p[data-stops]').forEach(function (p) {
+      var stops = p.getAttribute('data-stops').split(',').map(Number);
+      ScrollTrigger.create({ trigger: p, start: 'top 60%', end: 'bottom 40%', onToggle: function (self) { if (self.isActive) setStops(stops); } });
+    });
+    ScrollTrigger.create({ trigger: '.story', start: 'bottom 55%', onEnter: function () { setStops([6]); }, onLeaveBack: function () { setStops([5]); } });
+
+    /* Stat rings fill and numbers count up, once */
+    gsap.utils.toArray('.stat').forEach(function (st) {
+      var fg = st.querySelector('.fg'), num = st.querySelector('.num');
+      var pct = +st.getAttribute('data-ring'), seg = +st.getAttribute('data-segments') || 0;
+      var to = +num.getAttribute('data-to'), dec = +num.getAttribute('data-dec') || 0;
+      var pre = num.getAttribute('data-prefix') || '', suf = num.getAttribute('data-suffix') || '';
+      ScrollTrigger.create({ trigger: st, start: 'top 85%', once: true, onEnter: function () {
+        var o = { v: 0 };
+        if (seg) {
+          gsap.fromTo(fg, { strokeDashoffset: C }, { strokeDashoffset: 0, duration: 1.2, ease: 'steps(' + seg + ')' });
+        } else {
+          gsap.fromTo(fg, { strokeDashoffset: C }, { strokeDashoffset: C * (1 - pct / 100), duration: 1.2, ease: ease });
+        }
+        gsap.to(o, { v: to, duration: 1.2, ease: ease, onUpdate: function () { num.textContent = pre + o.v.toFixed(dec) + suf; } });
+      } });
+    });
+
+    /* 90-day bar fills once */
+    ScrollTrigger.create({ trigger: '.plan-bar', start: 'top 85%', once: true, onEnter: function () { gsap.fromTo('#plan-fill', { scaleX: 0 }, { scaleX: 1, duration: 1.2, ease: 'power2.out' }); } });
+
+  });
+})();
+</script>
+</body>
+</html>
